@@ -3,28 +3,19 @@ import { HTMLAttributes } from 'react';
 
 type DividerProps = HTMLAttributes<HTMLHRElement> & {
   size?: number;
-  margin?: string;
+  margin: number;
   color?: string;
   round?: boolean;
-  vertical?: boolean;
 };
 
-export default ({
-  size,
-  margin,
-  color,
-  round,
-  vertical,
-  ...props
-}: DividerProps) => {
+export default ({ size, margin, color, round, ...props }: DividerProps) => {
   const css: CSSObject = {
     border: `none`,
+    borderRadius: round ? `10px` : undefined,
     backgroundColor: color || `#000000`,
-    margin: margin || 0,
-    ...(vertical
-      ? { width: size || `1px`, height: `auto` }
-      : { width: `auto`, height: size || `1px` }),
-    ...(round && { borderRadius: `10px` }),
+    margin: `${margin} 0`,
+    width: `auto`,
+    height: size || `1px`,
   };
 
   return jsx(`hr`, { css, ...props });

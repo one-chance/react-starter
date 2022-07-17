@@ -4,15 +4,11 @@
 
 # <b> React Starter </b>
 
-### - A react starter based on typescript and emotion.
-
-### - This starter aims to provide a minimal base for building CSR website.
+### Boilerplate aims to provide a minimal base for building CSR website.
 
 <br>
 
-## 🏗 <b> Installation </b>
-
----
+## <b> Installation </b>
 
 ```
 yarn install
@@ -20,59 +16,59 @@ yarn install
 
 <br>
 
-## 🎬 <b>Available Scripts </b>
+## <b>Available Scripts </b>
 
----
+### Start development server
 
-> ### 1. Start development server
+```
+yarn start
+```
 
-> ```
-> yarn start
-> ```
+### Build the app for production
 
-> ### 2. Build the app for production
+```
+yarn build
+```
 
-> ```
-> yarn build
-> ```
+### Run prettier for all files
 
-> ### 3. Apply prettier
+```
+yarn format
+```
 
-> ```
-> yarn format
-> ```
+### Run ESLint for all files
 
-> ### 4. Apply eslint
-
-> ```
-> yarn lint
-> ```
+```
+yarn lint
+```
 
 <br>
 
-## 📜 <b> Features </b>
+## <b> Features </b>
 
-- Craco
-
-- React-Router-Dom
-
-- Emotion
-
-- Eslint, Prettier (airbnb)
-
-- i18next (i18n)
+- React
+- TypeScript
+- Emotion - Create components with styles applied in CSS-in-JS method
+- Eslint, Prettier - Modify the code style based on airbnb-typescript styles guide
+- i18next - Change the languge of text for internationalization
+- Path mapping - Import any file in src folder using the @ prefix (Craco)
+- Husky, Lint-staged - update soon
 
 <br>
 
-## 🗂 <b> Components </b>
+## <b> Basic Components </b>
 
-- Atoms - View, FlexView, Text, Input, Button, Form, Icon, Image, Svg
-- Organisms - Accordion, Checkbox, Divider, TextField, Link, Modal, Select
+- Button, Divider, Form, Icon, Image, Input, Link, Svg, Text, View, FlexView
+- Modal(Portal), Layout
 
 <br>
 
-## ✏️ <b> Author </b>
+## <b> License </b>
 
----
+### This boilerplate is licensed under the MIT license.
+
+<br>
+
+## <b> Author </b>
 
 &nbsp;Woody Lee ([@one-chance](https://github.com/one-chance))
