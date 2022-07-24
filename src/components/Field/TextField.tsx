@@ -1,10 +1,9 @@
+import { FlexView, Input } from '@components/Common';
+import { Label } from '@components/Text';
 import { CSSObject } from '@emotion/react';
 import { ChangeEvent, forwardRef, useState } from 'react';
 
-import { FlexView, Input } from '@components/Common';
-import { Label } from '@components/Text';
-
-type Props = {
+type TextFieldProps = {
   type?: 'text' | 'password';
   autoComplete?: string;
   label?: string;
@@ -16,7 +15,7 @@ type Props = {
   onKeyDown?: () => void;
 };
 
-export default forwardRef<HTMLInputElement, Props>(
+export default forwardRef<HTMLInputElement, TextFieldProps>(
   (
     {
       type,
@@ -28,7 +27,7 @@ export default forwardRef<HTMLInputElement, Props>(
       value,
       onChange,
       onKeyDown,
-    }: Props,
+    }: TextFieldProps,
     ref,
   ) => {
     const [focus, setFocus] = useState(false);

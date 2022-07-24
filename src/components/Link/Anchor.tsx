@@ -1,3 +1,4 @@
+import { jsx } from '@emotion/react';
 import { AnchorHTMLAttributes, DetailedHTMLProps } from 'react';
 
 export type AnchorProps = DetailedHTMLProps<
@@ -5,6 +6,4 @@ export type AnchorProps = DetailedHTMLProps<
   HTMLAnchorElement
 >;
 
-export default ({ children, ...props }: AnchorProps) => (
-  <a {...props}>{children}</a>
-);
+export default ({ ...props }: AnchorProps) => jsx(`a`, { ...props });

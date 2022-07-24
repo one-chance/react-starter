@@ -5,7 +5,14 @@ import { Image } from './Image';
 import { Input, InputProps } from './Input';
 import { Svg } from './Svg';
 import { Text, TextProps } from './Text';
-import { FlexView, FlexViewProps, View, ViewProps } from './View';
+import {
+  FlexView,
+  FlexViewProps,
+  GridView,
+  GridViewProps,
+  View,
+  ViewProps,
+} from './View';
 
 export {
   Button,
@@ -13,6 +20,8 @@ export {
   FlexView,
   type FlexViewProps,
   Form,
+  GridView,
+  type GridViewProps,
   Icon,
   Image,
   Input,

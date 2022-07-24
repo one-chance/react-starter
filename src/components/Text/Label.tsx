@@ -12,7 +12,6 @@ export default forwardRef<HTMLInputElement, Props>(
         color: `gray`,
         cursor: `text`,
         position: `absolute`,
-        // fontFamily: 'AppleSDGothicNeo',
         wordWrap: `break-word`,
         minWidth: `fit-content`,
       },

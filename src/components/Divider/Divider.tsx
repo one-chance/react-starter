@@ -13,8 +13,8 @@ export default ({ size, margin, color, round, ...props }: DividerProps) => {
     border: `none`,
     borderRadius: round ? `10px` : undefined,
     backgroundColor: color || `#000000`,
-    margin: `${margin} 0`,
-    width: `auto`,
+    margin: `${margin}px 0`,
+    width: `100%`,
     height: size || `1px`,
   };
 

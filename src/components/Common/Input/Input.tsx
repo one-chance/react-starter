@@ -1,4 +1,4 @@
-import { CSSObject } from '@emotion/react';
+import { CSSObject, jsx } from '@emotion/react';
 import { forwardRef, InputHTMLAttributes } from 'react';
 
 export type InputProps = InputHTMLAttributes<HTMLInputElement>;
@@ -25,10 +25,10 @@ const css: CSSObject = {
     appearance: `none`,
   },
   ':focus': {
-    outline: 0,
+    outline: `none`,
   },
 };
 
-export default forwardRef<HTMLInputElement, InputProps>((props, ref) => (
-  <input ref={ref} css={css} {...props} />
-));
+export default forwardRef<HTMLInputElement, InputProps>((props, ref) =>
+  jsx(`input`, { ref, css, ...props }),
+);

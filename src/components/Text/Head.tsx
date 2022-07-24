@@ -1,12 +1,10 @@
 import { CSSObject, jsx } from '@emotion/react';
-import { HTMLAttributes } from 'react';
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
-import { colors } from '@styles/Theme';
-
-export type Props = (
-  | HTMLAttributes<HTMLHeadingElement>
-  | HTMLHeadingElement
-) & {
+export type Props = DetailedHTMLProps<
+  HTMLAttributes<HTMLHeadingElement>,
+  HTMLHeadingElement
+> & {
   h1?: boolean;
   h2?: boolean;
   h3?: boolean;
@@ -28,8 +26,7 @@ export default ({ h1, h2, h3, h4, h5, h6, color, ...props }: Props) => {
 
   const css: CSSObject = {
     margin: 0,
-    ...colors[color || `black`],
-    // ...{ fontFamily: 'Noto Sans' }
+    color: color || `black`,
   };
 
   return jsx(component || `h1`, { css, ...props });

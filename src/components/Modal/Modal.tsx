@@ -3,12 +3,12 @@ import { CSSObject } from '@emotion/react';
 import { ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 
-type ModalProps = {
+interface ModalProps {
   width?: number;
   height?: number;
   children: ReactNode;
   closePortal: () => void;
-};
+}
 
 const modalCSS: CSSObject = {
   position: `fixed`,
@@ -32,13 +32,11 @@ export default ({ width, height, children, closePortal }: ModalProps) => {
   const container = document.getElementById(`root-modal`);
 
   const contentCSS: CSSObject = {
-    ...{
-      maxWidth: `calc(100% - 80px)`,
-      padding: `20px 40px`,
-      backgroundColor: `#FFF`,
-      borderRadius: `20px`,
-      zIndex: 20,
-    },
+    maxWidth: `calc(100% - 80px)`,
+    padding: `20px 40px`,
+    backgroundColor: `#FFF`,
+    borderRadius: `20px`,
+    zIndex: 20,
     ...(width && { width: `${width}px` }),
     ...(height && { height: `${height}px` }),
   };
