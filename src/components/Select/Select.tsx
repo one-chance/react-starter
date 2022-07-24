@@ -1,7 +1,6 @@
+import { FlexView, Text, Icon } from '@components/Common';
 import { CSSObject } from '@emotion/react';
 import { ReactNode, useEffect, useState, useRef, HTMLAttributes } from 'react';
-
-import { FlexView, Text, Icon } from '@components/Common';
 
 type SelectProps = HTMLAttributes<HTMLDivElement> & {
   name: string;

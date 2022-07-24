@@ -1,14 +1,13 @@
+import { FlexView, Text } from '@components/Common';
 import { CSSObject } from '@emotion/react';
 import React, { useRef, useEffect } from 'react';
 
-import { FlexView, Text } from '@components/Common';
-
-type OptionProps = {
+interface OptionProps {
   css?: CSSObject;
   values: string[];
   selected: string;
   onSelect: (index: number) => void;
-};
+}
 
 const firstBorder: CSSObject = {
   borderRadius: `8px 8px 0 0`,

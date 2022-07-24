@@ -1,5 +1,4 @@
-import { FlexView, Text } from '@components/Common';
-import { Link } from '@components/Link';
+import { FlexView, Text, Link } from '@components/Common';
 import { useTranslation } from 'react-i18next';
 import { Route, Routes } from 'react-router-dom';
 

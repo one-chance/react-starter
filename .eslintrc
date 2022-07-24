@@ -24,13 +24,12 @@
     "no-return-assign": "off",
     "react/button-has-type": "off",
     "react/function-component-definition": [
-      // components의 funciton-declaration 해제
       "error",
       {
         "namedComponents": "arrow-function",
         "unnamedComponents": "arrow-function"
       }
-    ],
+    ], // components의 funciton-declaration 해제
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off", // 맨 위에 React 선언 안해도 됨
     "react/jsx-filename-extension": "off",
@@ -45,6 +44,7 @@
         "reservedFirst": true
       }
     ], // jsx components의 Attribute를 정렬
+    "react-hooks/exhaustive-deps": "warn", // useEffect dependencies 체크
     "import/prefer-default-export": "off",
     "import/order": [
       "warn",
