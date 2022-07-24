@@ -17,6 +17,8 @@ export default ({ name, color, size, ...props }: IconProps) => {
 
   const css: CSSObject = {
     display: `inline-flex`,
+    overflow: `hidden`,
+    width: `fit-content`,
     height: size || 24,
     fill: color,
   };

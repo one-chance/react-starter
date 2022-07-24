@@ -1,3 +1,4 @@
+import { jsx } from '@emotion/react';
 import { DetailedHTMLProps, ImgHTMLAttributes } from 'react';
 
 export type ImageProps = DetailedHTMLProps<
@@ -5,4 +6,4 @@ export type ImageProps = DetailedHTMLProps<
   HTMLImageElement
 >;
 
-export default ({ alt, ...props }: ImageProps) => <img alt={alt} {...props} />;
+export default ({ ...props }: ImageProps) => jsx(`img`, { ...props });
