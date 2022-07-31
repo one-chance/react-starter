@@ -8,13 +8,11 @@ export type Props = LabelHTMLAttributes<HTMLLabelElement> & {
 export default forwardRef<HTMLInputElement, Props>(
   ({ error, ...props }: Props, ref) => {
     const css: CSSObject = {
-      ...{
-        color: `gray`,
-        cursor: `text`,
-        position: `absolute`,
-        wordWrap: `break-word`,
-        minWidth: `fit-content`,
-      },
+      color: `gray`,
+      cursor: `text`,
+      position: `absolute`,
+      wordWrap: `break-word`,
+      minWidth: `fit-content`,
       ...(error && { color: `red` }),
     };
 

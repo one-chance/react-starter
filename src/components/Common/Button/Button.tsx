@@ -9,7 +9,7 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export default ({ type, fit, color, ...props }: ButtonProps) => {
   const css: CSSObject = {
-    backgroundColor: `${color}` || `unset`,
+    backgroundColor: `unset`,
     border: `none`,
     outline: `none`,
     padding: 0,
@@ -31,6 +31,7 @@ export default ({ type, fit, color, ...props }: ButtonProps) => {
       pointerEvents: `none`,
     },
     ...(fit && { width: `fit-content` }),
+    ...(color && { backgroundColor: color }),
   };
 
   return jsx(`button`, { type: type || `button`, css, ...props });

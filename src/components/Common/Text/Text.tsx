@@ -55,7 +55,7 @@ export default ({
         (large && `large`) ||
         (xLarge && `xLarge`) ||
         (xxLarge && `xxLarge`) ||
-        `medium`
+        `normal`
     ],
     ...fontWeights[
       (light && `light`) ||

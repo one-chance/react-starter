@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
-import './translations/index';
+import './locales/index';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';

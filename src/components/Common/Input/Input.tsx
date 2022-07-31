@@ -8,8 +8,9 @@ const css: CSSObject = {
   outline: `none`,
   background: `none`,
   lineHeight: `30px`,
+  padding: `0 8px`,
   //   color: 'currentColor',
-  //   fontSize: FontSizes.medium,
+  //   fontSize: FontSizes.normal,
   //   '::placeholder': {
   //     color: TextColors.textLight
   //   },

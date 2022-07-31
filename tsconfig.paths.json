@@ -7,11 +7,11 @@
       "@components/*": ["components/*"],
       "@constants/*": ["constants/*"],
       "@contexts/*": ["contexts/*"],
-      "@models/*": ["models/*"],
+      "@interfaces/*": ["interfaces/*"],
+      "@locless/*": ["localess/*"],
       "@pages/*": ["pages/*"],
       "@routes/*": ["routes/*"],
       "@styles/*": ["styles/*"],
-      "@translations/*": ["translations/*"],
       "@utils/*": ["utils/*"]
     }
   }
