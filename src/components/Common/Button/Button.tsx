@@ -9,14 +9,16 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export default ({ type, fit, color, ...props }: ButtonProps) => {
   const css: CSSObject = {
+    alignItems: `center`,
     backgroundColor: `unset`,
     border: `none`,
-    outline: `none`,
-    padding: 0,
+    color: `unset`,
     display: `inline-flex`,
     justifyContent: `center`,
-    alignItems: `center`,
+    outline: `none`,
+    padding: 0,
     transition: `filter 0.3s, background 0.3s`,
+    userSelect: `none`,
     ':not(:disabled)': {
       cursor: `pointer`,
     },

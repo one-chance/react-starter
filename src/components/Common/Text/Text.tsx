@@ -1,5 +1,5 @@
 import { CSSObject, jsx } from '@emotion/react';
-import { fontSizes, fontWeights } from '@styles/Theme';
+import { fontSizes, fontWeights } from '@styles/system';
 import { HTMLAttributes, LabelHTMLAttributes } from 'react';
 
 export type TextProps = (

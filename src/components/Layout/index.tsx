@@ -1,8 +1,7 @@
 import FooterRouter from '@routes/FooterRouter';
 import HeaderRouter from '@routes/HeaderRouter';
 import MainRouter from '@routes/MainRouter';
-import GlobalStyles from '@styles/GlobalStyles';
-import React, { DetailedHTMLProps, HTMLAttributes } from 'react';
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 export type LayoutProps = DetailedHTMLProps<
   HTMLAttributes<HTMLElement>,
@@ -25,11 +24,4 @@ export const Footer = (props: LayoutProps) => (
   <footer {...props}>
     <FooterRouter />
   </footer>
-);
-
-export const Root = ({ children }: LayoutProps) => (
-  <>
-    <GlobalStyles />
-    {children}
-  </>
 );
