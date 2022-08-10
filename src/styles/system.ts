@@ -44,14 +44,6 @@ export const FontWeights = {
   black: 900,
 };
 
-export const BreakPoints = {
-  xs: 0,
-  sm: 576,
-  md: 768,
-  lg: 992,
-  xl: 1200,
-};
-
 export const Colors = {
   primary: `#358CFE`,
   black: `#515355`,
@@ -61,57 +53,10 @@ export const Colors = {
   gray: `#BEBFC0`,
 };
 
-const html: CSSObject = {
-  // fontFamily: `var(--font-family-sans-serif)`,
-  // fontSize: `var(--font-default-size)`,
-  // fontWeight: `normal`,
-  WebkitFontSmoothing: `antialiased`, // Antialiasing.
-  MozOsxFontSmoothing: `grayscale`, // Antialiasing.
-  boxSizing: `border-box`,
-  //   backgroundColor: Colors.white
-};
-
-const body: CSSObject = {
-  margin: 0, // Remove the margin in all browsers.
-  //   color: TextColors.text,
-  //   fill: TextColors.fill,
-  // Add support for document.body.requestFullScreen().
-  // Other elements, if background transparent, are not supported.
-  '&::backdrop': {
-    // backgroundColor: Colors.grayDark
-  },
-  '@media print': {
-    // backgroundColor: Colors.white
-  },
-};
-
-const etc: CSSObject = {
-  a: {
-    textDecoration: `none`,
-    color: `unset`,
-  },
-  'strong, b': {
-    fontWeight: 700,
-  },
-  '*': {
-    boxSizing: `border-box`,
-    fontFamily: `Noto Sans KR`,
-  },
-};
-
-export const globalStyles: CSSObject = {
-  html: {
-    ...html,
-    backgroundColor: `#F3F4F8`,
-  },
-  body: {
-    // ...body,
-    width: `100vw`,
-    minHeight: `100vh`,
-    margin: 0,
-  },
-  main: {
-    minHeight: `calc(100vh - 6rem)`,
-  },
-  ...etc,
+export const BreakPoints = {
+  xs: 0,
+  sm: 576,
+  md: 768,
+  lg: 992,
+  xl: 1200,
 };

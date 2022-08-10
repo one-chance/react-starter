@@ -1,9 +1,10 @@
-import { Footer, Header, Main, Root } from '@components/Layout';
+import { Footer, Header, Main } from '@components/Layout';
+import React from 'react';
 
 export default () => (
-  <Root>
+  <>
     <Header />
     <Main />
     <Footer />
-  </Root>
+  </>
 );

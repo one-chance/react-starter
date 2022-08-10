@@ -45,3 +45,27 @@
     url('./assets/fonts/NotoSansKR-Thin.otf') format('woff'),
     url('./assets/fonts/NotoSansKR-Thin.otf') format('truetype');
 }
+
+* {
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR';
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  width: 100vw;
+  margin: 0;
+}
+
+main {
+  min-height: calc(100vh - 6rem);
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
