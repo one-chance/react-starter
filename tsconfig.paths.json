@@ -8,7 +8,7 @@
       "@constants/*": ["constants/*"],
       "@contexts/*": ["contexts/*"],
       "@interfaces/*": ["interfaces/*"],
-      "@locless/*": ["localess/*"],
+      "@locales/*": ["locales/*"],
       "@pages/*": ["pages/*"],
       "@routes/*": ["routes/*"],
       "@styles/*": ["styles/*"],
