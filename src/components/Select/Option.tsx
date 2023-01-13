@@ -2,12 +2,12 @@ import { FlexView, Text } from '@components/Common';
 import { CSSObject } from '@emotion/react';
 import React, { useRef, useEffect } from 'react';
 
-interface OptionProps {
+type OptionProps = {
   css?: CSSObject;
   values: string[];
   selected: string;
   onSelect: (index: number) => void;
-}
+};
 
 const firstBorder: CSSObject = {
   borderRadius: `8px 8px 0 0`,
@@ -21,9 +21,11 @@ export default ({ css, values, selected, onSelect }: OptionProps) => {
   const refs = useRef<HTMLDivElement[]>([]);
 
   const optionCSS: CSSObject = {
+    backgroundColor: `white`,
     lineHeight: `32px`,
     paddingLeft: `8px`,
     cursor: `pointer`,
+    zIndex: 10,
     outline: `none`,
     ':hover': {
       backgroundColor: `#F3F4F8`,
@@ -35,6 +37,7 @@ export default ({ css, values, selected, onSelect }: OptionProps) => {
     const index = values.indexOf(selected);
     if (index !== -1) refs.current[index].focus();
     else refs.current[0].focus();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selected]);
 
   return (
@@ -66,7 +69,7 @@ export default ({ css, values, selected, onSelect }: OptionProps) => {
             }
           }}
         >
-          <Text color="#4D4D4D" fill noDrag small start>
+          <Text color="#4D4D4D" fill small start>
             {option}
           </Text>
         </FlexView>

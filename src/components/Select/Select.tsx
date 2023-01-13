@@ -31,10 +31,11 @@ export default ({
 
   const wrapperCSS: CSSObject = {
     width: width || `100%`,
+    userSelect: `none`,
   };
 
   const selectCSS: CSSObject = {
-    lineHeight: `40px`,
+    lineHeight: `38px`,
     cursor: `pointer`,
     padding: `0 8px`,
     backgroundColor: disabled ? `#DCDEEA` : `#FFF`,
@@ -76,7 +77,7 @@ export default ({
       {...props}
     >
       <FlexView content="between" css={selectCSS} items="center" row>
-        <Text noDrag>{name}</Text>
+        <Text>{name}</Text>
         <Icon name={showOption ? `arrowUp` : `arrowDown`} size={16} />
       </FlexView>
       {showOption && (
