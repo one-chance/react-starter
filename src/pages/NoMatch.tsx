@@ -1,4 +1,4 @@
-import { FlexView, Text } from '@components/Common';
+import { FlexView, Text } from '@components/common';
 
 export default () => (
   <FlexView center fixed>

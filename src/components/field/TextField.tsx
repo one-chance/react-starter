@@ -1,5 +1,5 @@
-import { FlexView, Input } from '@components/Common';
-import { Label } from '@components/Text';
+import { FlexView, Input } from '@components/common';
+import { Label } from '@components/text';
 import { CSSObject } from '@emotion/react';
 import { ChangeEvent, forwardRef, useState } from 'react';
 

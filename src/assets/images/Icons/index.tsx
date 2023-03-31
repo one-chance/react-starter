@@ -1,4 +1,4 @@
-import { Svg } from '@components/Common';
+import { Svg } from '@components/common';
 
 export const arrowDown = (color: string) => (
   <Svg height={16} width={16}>

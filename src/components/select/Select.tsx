@@ -1,4 +1,4 @@
-import { FlexView, Text, Icon } from '@components/Common';
+import { FlexView, Text, Icon } from '@components/common';
 import { CSSObject } from '@emotion/react';
 import { ReactNode, useEffect, useState, useRef, HTMLAttributes } from 'react';
 

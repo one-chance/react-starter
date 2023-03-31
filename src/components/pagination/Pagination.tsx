@@ -1,4 +1,4 @@
-import { FlexView, Button, Icon, Text } from '@components/Common';
+import { FlexView, Button, Icon, Text } from '@components/common';
 import { CSSObject } from '@emotion/react';
 import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';

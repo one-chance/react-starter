@@ -1,4 +1,4 @@
-import { Footer, Header, Main } from '@components/Layout';
+import { Footer, Header, Main } from '@components/layout';
 import React from 'react';
 
 export default () => (

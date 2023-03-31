@@ -1,4 +1,4 @@
-import { FlexView } from '@components/Common';
+import { FlexView } from '@components/common';
 import { CSSObject } from '@emotion/react';
 import { ReactNode } from 'react';
 import { createPortal } from 'react-dom';
@@ -7,7 +7,7 @@ interface ModalProps {
   width?: number;
   height?: number;
   children: ReactNode;
-  closePortal: () => void;
+  closePortal: (param: any) => void;
 }
 
 const modalCSS: CSSObject = {
