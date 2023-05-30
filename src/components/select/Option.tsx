@@ -4,25 +4,26 @@ import React, { useRef, useEffect } from 'react';
 
 type OptionProps = {
   css?: CSSObject;
+  center?: boolean;
   values: string[];
   selected: string;
   onSelect: (index: number) => void;
 };
 
 const firstBorder: CSSObject = {
-  borderRadius: `8px 8px 0 0`,
+  borderRadius: `4px 4px 0 0`,
 };
 
 const lastBorder: CSSObject = {
-  borderRadius: `0 0 8px 8px`,
+  borderRadius: `0 0 4px 4px`,
 };
 
-export default ({ css, values, selected, onSelect }: OptionProps) => {
+export default ({ css, center, values, selected, onSelect }: OptionProps) => {
   const refs = useRef<HTMLDivElement[]>([]);
 
   const optionCSS: CSSObject = {
     backgroundColor: `white`,
-    lineHeight: `32px`,
+    minHeight: `32px`,
     paddingLeft: `8px`,
     cursor: `pointer`,
     zIndex: 10,
@@ -46,12 +47,13 @@ export default ({ css, values, selected, onSelect }: OptionProps) => {
         <FlexView
           key={option}
           ref={(e: HTMLDivElement) => (refs.current[idx] = e)}
+          content="center"
           css={{
             ...optionCSS,
             ...(idx === 0 && firstBorder),
             ...(idx === values.length - 1 && lastBorder),
           }}
-          items="start"
+          items={center ? `center` : `start`}
           tabIndex={0}
           onBlur={() => (refs.current[idx].style.backgroundColor = `#FFF`)}
           onClick={() => onSelect(idx)}
@@ -69,7 +71,7 @@ export default ({ css, values, selected, onSelect }: OptionProps) => {
             }
           }}
         >
-          <Text color="#4D4D4D" fill small start>
+          <Text color="#4D4D4D" small>
             {option}
           </Text>
         </FlexView>

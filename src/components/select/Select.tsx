@@ -5,21 +5,16 @@ import { ReactNode, useEffect, useState, useRef, HTMLAttributes } from 'react';
 type SelectProps = HTMLAttributes<HTMLDivElement> & {
   name: string;
   width?: number;
+  height?: number;
   children: ReactNode;
   disabled?: boolean;
   error?: boolean;
 };
 
-const optionListCSS: CSSObject = {
-  cursor: `pointer`,
-  backgroundColor: `#FFF`,
-  borderRadius: `5px`,
-  boxShadow: `0 0 2px rgba(0, 0, 0, 0.3)`,
-};
-
 export default ({
   name,
   width,
+  height,
   children,
   disabled,
   error,
@@ -35,22 +30,32 @@ export default ({
   };
 
   const selectCSS: CSSObject = {
-    lineHeight: `38px`,
+    minHeight: height || `40px`,
     cursor: `pointer`,
     padding: `0 8px`,
     backgroundColor: disabled ? `#DCDEEA` : `#FFF`,
     border: `1px solid #DCDEEA`,
-    borderRadius: `5px`,
+    borderRadius: `4px`,
     ...(showOption && { border: `1px solid #358CFE` }),
     ...(error && { border: `1px solid red` }),
   };
 
-  useEffect(() => {
-    setShowOption(false);
-  }, [name]);
+  const optionListCSS: CSSObject = {
+    position: `absolute`,
+    marginTop: height || `40px`,
+    width: width || `100%`,
+    cursor: `pointer`,
+    backgroundColor: `#FFF`,
+    borderRadius: `4px`,
+    boxShadow: `0 0 2px rgba(0, 0, 0, 0.3)`,
+  };
+
+  // useEffect(() => {
+  //   setShowOption(false);
+  // }, [name]);
 
   useEffect(() => {
-    const autoClose = (e: MouseEvent) => {
+    const autoClose = (e: CustomEvent<MouseEvent>) => {
       if (
         !selectRef.current?.contains(e.target as Node) &&
         !optionListRef.current?.contains(e.target as Node)
@@ -60,10 +65,10 @@ export default ({
       }
     };
 
-    window.addEventListener(`mousedown`, autoClose);
+    window.addEventListener(`mousedown`, autoClose as EventListener);
 
     return () => {
-      window.removeEventListener(`mousedown`, autoClose);
+      window.removeEventListener(`mousedown`, autoClose as EventListener);
     };
   }, []);
 
@@ -80,6 +85,7 @@ export default ({
         <Text>{name}</Text>
         <Icon name={showOption ? `arrowUp` : `arrowDown`} size={16} />
       </FlexView>
+
       {showOption && (
         <FlexView ref={optionListRef} css={optionListCSS}>
           {children}
